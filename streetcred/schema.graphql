@@ -1,0 +1,68 @@
+type AddNewNftType @entity(immutable: true) {
+  id: Bytes!
+  tokenType: Int! # uint8
+  price: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type AddToUsersQueue @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  tokenType: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Buy @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  tokenType: Int! # uint8
+  tokenId: BigInt! # uint256
+  price: BigInt! # uint256
+  homie1: Bytes! # address
+  homie2: Bytes! # address
+  isFromQueue: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type LotterySetted @entity(immutable: true) {
+  id: Bytes!
+  lottery: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RefSetted @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  ref: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Sell @entity(immutable: true) {
+  id: Bytes!
+  homie1: Bytes! # address
+  homie2: Bytes! # address
+  tokenType: Int! # uint8
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
