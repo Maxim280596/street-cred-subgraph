@@ -3,6 +3,12 @@
     "HustleMarket": {
       "address": "0x73fc8293aac6c202e6a1c1b2407f1f1cb3817f16",
       "startBlock": 46566850
+    },
+    "StreetCred": {
+      "address": "0x6ed2ddc9c5d4561d985f04199b4309bd2f398c69"
+    },
+    "HustleBox": {
+      "address": "0x30f1d9387bf3c501064e07f98ff5e89dd5f823df"
     }
   }
 }
